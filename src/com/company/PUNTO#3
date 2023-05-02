@@ -1,0 +1,33 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        //Se crea el arreglo de los numero s
+        int[] numeros = {15,12,54,8,6,78,78,16,23,15,1,5,5,8,4,6,2,56};
+        //Creamos las dos variables de minimo y maximo para inicailizar el contador en posicion 1
+        int min = numeros[0];
+        int max = numeros[0];
+        //Contador para obtener el total de la suma de los numeros para luego  utilizarla para sacar el promdio
+        int suma = 0;
+        //Se recorre el arreglo desde la segunda posición hasta la última
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] < min) {
+                // Si el número actual es menor que el valor de la variable minimo, se actualiza el valor de minimo
+                min = numeros[i];
+            }
+            if (numeros[i] > max) {
+                // Si el número actual es mayor que el valor de la variable maximo, se actualiza el valor de maximo
+
+                max = numeros[i];
+            }
+              // Se suma el valor del número actual a la variable suma
+            suma += numeros[i];
+        }
+
+        float promedio = (float) suma / numeros.length;
+
+        System.out.println("El mínimo es: " + min);
+        System.out.println("El máximo es: " + max);
+        System.out.println("El promedio es: " + promedio);
+    }
+}

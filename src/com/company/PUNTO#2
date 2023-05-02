@@ -1,0 +1,33 @@
+
+		PUNTO #2
+
+package com.company;
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+        Scanner inputData = new Scanner(System.in);
+       // Declaramos una variable para almacenar la palabra que se ingresará
+        String palabra;
+
+        // Declaramos una variable para almacenar la palabra invertida
+        String inver = " ";
+
+        // Solicitamos al usuario que ingrese la palabra a invertir
+        System.out.print("INGRESE LA PALABRA QUE DESEA INVERTIR: ");
+
+        // Leemos la entrada del usuario y la almacenamos en la variable "palabra"
+        palabra = inputData.nextLine();
+
+        // Recorremos la palabra desde el último carácter hasta el primero
+        for (int i = palabra.length() - 1; i >= 0; i--) {
+
+            // Concatenamos cada carácter en orden inverso a la variable "inver"
+            inver +=palabra.charAt(i);
+        }
+
+        // Imprimimos la palabra invertida
+        System.out.println(inver);
+    }
+}
